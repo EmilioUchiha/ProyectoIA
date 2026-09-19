@@ -17,8 +17,12 @@ public class Mapa{
 
     public void visitado(int x, int y) {
         if (x >= 0 && x < tamano && y >= 0 && y < tamano) {
-            mapa[y][x] = -1;
+            mapa[y][x] = -1; // Marca la posición como visitada con -1
         }
+    }
+
+    public int[][] getMapa() {
+        return mapa;
     }
 
 }
