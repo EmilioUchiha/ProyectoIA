@@ -1,7 +1,18 @@
-public static void main(String[] args) {
-    Jugador jugador1 = new Jugador("Juan", 25, "Delantero");
-    Jugador jugador2 = new Jugador("Pedro", 30, "Defensa");
+public class Mapa{
+    private static final int tamano = 8;
+    private int[][] mapa;
 
-    System.out.println(jugador1);
-    System.out.println(jugador2);
+    public Mapa() {
+        mapa = new int[tamano][tamano];
+        inicializarMapa();
+    }
+
+    private void inicializarMapa() {
+        for (int i = 0; i < tamano; i++) {
+            for (int j = 0; j < tamano; j++) {
+                mapa[i][j] = 0; // Inicializa todas las posiciones del mapa con 0
+            }
+        }
+    }
+
 }
