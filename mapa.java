@@ -25,4 +25,10 @@ public class Mapa{
         return mapa;
     }
 
+    public int getCasilla(int x, int y) {
+        if (x >= 0 && x < tamano && y >= 0 && y < tamano) {
+            return mapa[y][x];
+        }
+        return -1; // Retorna -1 si las coordenadas están fuera del mapa
+    }
 }
